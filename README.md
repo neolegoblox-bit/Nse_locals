@@ -1,2 +1,2 @@
 # Nse_locals
-Locals
+Local Nse
