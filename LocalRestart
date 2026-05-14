@@ -1,0 +1,23 @@
+import os
+import ctypes
+import time
+from tkinter import Tk, messagebox
+
+# Hide tkinter window
+root = Tk()
+root.withdraw()
+
+# Warning popup
+confirm = messagebox.askyesno(
+    "Restart Computer",
+    "This will close all opened programs and restart the computer.\n\nUnsaved work may be lost.\n\nContinue?"
+)
+
+if confirm:
+    print("Closing programs and restarting in 5 seconds...")
+    time.sleep(5)
+
+    # Force close apps and restart Windows
+    os.system("shutdown /r /f /t 0")
+else:
+    print("Cancelled.")
